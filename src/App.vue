@@ -1,12 +1,24 @@
 <template>
   <div id="app">
     <div id="nav">
+      <button @click="goBack">&lsaquo;</button>
       <router-link to="/">Challenges</router-link>
       <router-link to="/profile">Profile</router-link>
     </div>
     <router-view/>
   </div>
 </template>
+
+<script>
+export default {
+  methods: {
+    goBack(){
+      this.$router.go(-1);
+    }
+  }
+}
+</script>
+
 
 <style lang="scss">
 #app {
