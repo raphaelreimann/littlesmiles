@@ -1,9 +1,13 @@
 <template>
   <div class="challenge_detail">
     <h1>{{ challenge.title}}</h1>
-  <h2 class="subtitle">{{ challenge.subtitle}}</h2>
-  <div class="description">{{ challenge.description}}</div>
-  <div class="category">{{ challenge.category}}</div>
+    <h2 class="subtitle">{{ challenge.subtitle}}</h2>
+    <div class="description">{{ challenge.description}}</div>
+    <div class="category">{{ challenge.category}}</div>
+    <div class="actions">
+      <router-link :to="{ name: 'challengeCompleted', params: { id: challenge.id }}">Complete</router-link>
+      <router-link :to="{ name: 'challengeRejected', params: { id: challenge.id }}">Reject</router-link>
+    </div>
   </div>
 </template>
 
