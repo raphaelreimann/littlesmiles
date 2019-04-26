@@ -1,6 +1,6 @@
 <template>
   <div class="challenge_detail">
-    <h1>This is: {{ challenge.title}}</h1>
+    <h1>{{ challenge.title}}</h1>
   <h2 class="subtitle">{{ challenge.subtitle}}</h2>
   <div class="description">{{ challenge.description}}</div>
   <div class="category">{{ challenge.category}}</div>
@@ -12,7 +12,6 @@ export default {
   computed: {
     challenge(){
       const self = this;
-      console.log(self.$route.params);
       return this.challenges.find((item) => {
         return item.id === parseInt(self.$route.params.id);
       });
