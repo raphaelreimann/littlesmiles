@@ -26,7 +26,7 @@ export default new Router({
       component: AddChallenge,
     },
     {
-      path: '/challenge/completed',
+      path: '/challenges/:id/completed',
       name: 'challengeCompleted',
       component: ChallengeCompleted,
     },
@@ -36,7 +36,7 @@ export default new Router({
       component: Challenge,
     },
     {
-      path: '/challenge/rejected',
+      path: '/challenges/:id/rejected',
       name: 'challengeRejected',
       component: ChallengeRejected,
     },
