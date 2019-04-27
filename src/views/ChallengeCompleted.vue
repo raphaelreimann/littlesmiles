@@ -8,7 +8,7 @@
     <div class="content">
           <span class="main-text">How difficult was the challenge for you?</span>
         <div class="btn-group">
-          <button class="feedback-btn">Bad</button>
+          <button class="feedback-btn" onClick="alert("saf")>Bad</button>
           <button class="feedback-btn">Okay</button>
           <button class="feedback-btn">Good</button>
         </div>
@@ -34,6 +34,7 @@ body{
   margin-top: 30px;
 }
 #feedback-area{
+  margin-left: 0px;
   text-align: left;
 }
 .feedback-btn{
