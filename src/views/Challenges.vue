@@ -6,9 +6,15 @@
           class="list-item" 
           v-for="challenge in currentChallenges" 
           :key="challenge.id" 
-          :to="{ name: 'challenge', params: { id: challenge.id }}">
+          :to="{ name: 'challenge', params: { id: challenge.id }}"
+          v-bind:class="{
+           'gradient-one': challenge.category === 'Appreciation',
+           'gradient-two': challenge.category === 'Friends & Family'
+          }"
+        >
             <span class="title">{{ challenge.title}}</span>
             <span class="subtitle">{{ challenge.subtitle}}</span>
+            <!--span class="description">{{ challenge.description}}</span-->
         </router-link>
     </ul>
   </div>
@@ -49,20 +55,43 @@ export default {
 <style lang="scss">
   #list{
     list-style: none;
+    height: 800px;
     padding-left: 0px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
   }
   .list-item {
     //background-color: red;
-    margin: 10px;
-    padding: 4px;
-    border-style: solid;
-    border-width: 0px 0px 1px 0px;
-    border-color: grey;
+    margin: 0px;
+    text-align: left;
+    padding: 30px;
+    color: white;
+    background-image: linear-gradient(to right, red, darkred);
+    height: 30%; 
+    .gradient-one{
+      background-image: linear-gradient(to right, purple, blue);
+    } 
+    .gradient-two{
+      background-image: linear-gradient(to right, green, darkblue);
+    } 
   }
 
   .title{
     font-weight: bold;
-    font-size: 1.3em;
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 5px;
+  }
+  .subtitle{
+    font-weight: bold;
+    font-size: 0.9em;
+    display: block;
+  }
+  .description{
+    font-weight: lighter;
+    font-size: 0.9em;
     display: block;
   }
 </style>

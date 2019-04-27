@@ -5,10 +5,8 @@
     <div class="description">{{ challenge.description}}</div>
     <div class="category">{{ challenge.category}}</div>
     <div class="actions">
-      <router-link :to="{ name: 'challengeCompleted', params: { id: challenge.id }}">Complete</router-link>
-      <button @click="onComplete">Complete</button>
-      <button @click="onReject">Reject</button>
-      <router-link :to="{ name: 'challengeRejected', params: { id: challenge.id }}">Reject</router-link>
+      <router-link @click="onComplete" tag="button" :to="{ name: 'challengeCompleted', params: { id: challenge.id }}">Complete</router-link>
+      <router-link @click="onReject" tag="button" :to="{ name: 'challengeRejected', params: { id: challenge.id }}">Reject</router-link>
     </div>
   </div>
 </template>
