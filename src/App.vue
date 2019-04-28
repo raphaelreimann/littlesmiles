@@ -3,7 +3,7 @@
     <div id="nav">
       <div class="flex, content">
         <a class="flexitem, btn-back" @click="goBack">&lsaquo;</a>
-        <router-link to="/"><span class="flexitem">CHALLENGES</span></router-link>
+        <router-link to="/"><span class="flexitem, nav-title">CHALLENGES</span></router-link>
         <router-link to="/profile"><span class="dot"></span><!--img src="assets/Profile icon.png" alt="Profile Icon" class="flexitem, profile-img"--></router-link>
       </div>
     </div>
@@ -30,6 +30,13 @@ body{
   padding: 0%;
   margin: 0%;
 }
+h1 {
+  color: white;
+}
+.nav-title{
+  color: white;
+  padding-top: 5px;
+}
 #app {
   font-family: 'Quicksand', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -53,13 +60,14 @@ body{
   .content{
     display: flex;
     justify-content: space-around;
-    margin-top: 15px;
+    align-items: center;
+    margin-top: 8px;
     width: 100%;
     a {
       font-weight: bold; 
       text-decoration: none;
       margin-right: 0px;
-      color: #2c3e50;
+      color: white;
       // &.router-link-exact-active {
       //   color: #42b983;
       // }
@@ -68,7 +76,7 @@ body{
     //   width: 20px;
     // }
     .dot {
-      margin-top: -10px;
+      margin-top: 0px;
       height: 35px;
       width: 35px;
       background-color: #f5f5f5;
@@ -76,6 +84,7 @@ body{
       display: flex;
     }
     .btn-back{
+      margin-top: -5px;
       font-size: 25px;
     }
   }
